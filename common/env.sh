@@ -27,9 +27,10 @@ declare -f which > /dev/null && unset -f which
 
 
 # CCACHE Setup for AOSP
-# unset USE_CCACHE CCACHE_EXEC
+# Disable CCACHE. As there is not much benifits from that.
+unset USE_CCACHE CCACHE_EXEC
 
-export USE_CCACHE=1
+# export USE_CCACHE=1
 export CCACHE_EXEC=/home/shankmittal/opt/bin/ccache
 export CCACHE_DIR=~/local/ccache
 # export CCACHE_ALLOW_SOFT_FAILURES=1
@@ -47,11 +48,11 @@ export MAUI_AUTH="'538427736 TUJlIdqF0f2kITNe932bF17xknKM49WH'"
 # unzip -o /tmp/$ANDROID_PACKAGE -d $ANDROID_SDK_ROOT &&
 # echo "y" | $ANDROID_SDK_ROOT/cmdline-tools/bin/sdkmanager --proxy_host=fwdproxy --proxy_port=8080 --proxy=http --no_https --sdk_root=$ANDROID_SDK_ROOT emulator platform-tools)
 
-export ANDROID_SDK_ROOT=~/android-sdk
+export ANDROID_SDK_ROOT=~/opt/android-sdk
 export PATH=$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # set proxy
 export no_proxy=".fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost"
 alias pp='https_proxy=http://fwdproxy:8080 http_proxy=http://fwdproxy:8080 no_proxy=.fbcdn.net,.facebook.com,.thefacebook.com,.tfbnw.net,.fb.com,.fburl.com,.facebook.net,.sb.fbsbx.com,localhost'
 
-alias curl='curl $(fwdproxy-config curl)'
+# alias curl='curl $(fwdproxy-config curl)'

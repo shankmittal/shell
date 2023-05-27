@@ -16,5 +16,6 @@ bash_dir=${shell_dir}/bash
 . ${common_dir}/grok_functions.sh
 . ${common_dir}/repo_functions.sh
 . ${common_dir}/env.sh
+. ${common_dir}/mu_wrapper.sh
 
 ZSH_THEME=agnosterzak

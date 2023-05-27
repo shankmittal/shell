@@ -1,5 +1,5 @@
-function maui() { $HOME/fbsource/fbcode/maui/dev-entry $@; }
-function maue() { ( cd $HOME/fbsource/fbandroid && maui $@ ); }
+# function maui() { $HOME/fbsource/fbcode/maui/dev-entry $@; }
+# function maue() { ( cd $HOME/fbsource/fbandroid && maui $@ ); }
 function whichs()
 {
     ( alias;
